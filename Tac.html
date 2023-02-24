@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="Toe.css">
+</head>
+<body>
+    
+    <div class="container"> 
+        <h1 id="PlayerText">Tic Tac Toe</h1>
+        <button id="restartBtn">Restart</button>
+        <p id="current-player"></p>
+    </div>
+    
+        <script>
+            const container = document.querySelector(".container");
+            
+            let board = document.createElement("div");
+            board.id = "board";
+
+            for (let i = 0; i < 9; i++) {
+                    let cell = document.createElement("div");
+                    cell.classList.add("box");
+                    cell.id = i;
+                    board.appendChild(cell);
+            }
+
+            container.appendChild(board);
+        </script>
+
+    <script src="Tic.js"></script>
+</body>
+</html>
